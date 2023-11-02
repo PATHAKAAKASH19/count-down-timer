@@ -1,0 +1,66 @@
+
+*, *::after, *::before {
+   box-sizing: border-box;
+}
+   
+body {
+   font-size: 100px;
+   
+}
+
+
+#box1, #box3, #box5, #box7  {
+    background-color: pink;
+    
+}
+
+#box2, #box4, #box6, #box8{
+   background-color: pink;
+   display: flex;
+   align-items: flex-end;
+    
+}
+
+
+#box1 , #box2 , #box3, #box4, #box5 , #box6 , #box7, #box8{
+    height: 0.75em;   
+    line-height: 1;
+    padding: 0.25em;
+    border-radius: 15px;
+    
+}
+
+.my-container {
+   display: inline-flex;  
+   flex-direction: column; 
+   align-items: center;
+   
+}
+
+p {
+   
+   
+   font-size: 25px;
+   line-height: 0.5;
+}
+
+
+.head {
+  text-align: center;
+
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  gap:4%;
+}
+
+.middle {
+  
+   display: flex;
+   flex-direction: column;
+   gap: 60px;
+   margin-top:10%;
+}
+
