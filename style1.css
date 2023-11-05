@@ -5,24 +5,19 @@
    
 body {
    font-size: 100px;
-   
+   background-image: url(./images/bg-stars.svg);
+   font-family: 'Red Hat Text', sans-serif;
+   background-color: hsl(234, 17%, 12%);
+   color: hsl(345, 95%, 68%);
 }
 
-
-#box1, #box3, #box5, #box7  {
-    background-color: pink;
-    
-}
-
-#box2, #box4, #box6, #box8{
-   background-color: pink;
+#box2, #box4, #box6, #box8 {
    display: flex;
    align-items: flex-end;
-    
 }
 
-
 #box1 , #box2 , #box3, #box4, #box5 , #box6 , #box7, #box8{
+   background-color: hsl(236, 21%, 26%);
     height: 0.75em;   
     line-height: 1;
     padding: 0.25em;
@@ -31,36 +26,49 @@ body {
 }
 
 .my-container {
-   display: inline-flex;  
-   flex-direction: column; 
-   align-items: center;
-   
+   text-align: center ;
 }
 
 p {
-   
-   
    font-size: 25px;
    line-height: 0.5;
+   color: hsl(237, 18%, 59%);
+   letter-spacing: 4px;
 }
 
 
 .head {
-  text-align: center;
-
+   text-align: center;
+   color: hsl(0, 0%, 100%);
 }
 
 .center {
-  display: flex;
-  justify-content: center;
+  display:flex;
   gap:4%;
+  justify-content: center;
 }
 
 .middle {
-  
    display: flex;
    flex-direction: column;
+   align-items: center;
    gap: 60px;
    margin-top:10%;
+}
+
+.image {
+   width: 100%;
+   height: auto;
+   position: fixed;
+   bottom: 0.2%;
+   right: 0%;
+   left: 0%;
+}
+
+.social-icon {
+   position: fixed;
+   bottom: 5%;
+   right: 30%;
+   left: 50%;
 }
 
