@@ -4,41 +4,62 @@ const box1 = document.getElementById("box1")
 const box2 = document.getElementById("box2")
 
 
+let date = new Date("10 november 2023")
 
 
 setInterval(showTime, 1000)
 
 function showTime() {
     
-    let date = new Date()
-    formatTime()
-    
-    function formatTime() {
-        let seconds = date.getSeconds()
-        let min = date.getMinutes()
-        let hours = date.getHours()
-        let days = date.getDay()
-        
-        let formatMin = min >= 10 ? min : "0"+min
-        let formathours = hours >= 10 ? hours : "0"+hours
-        let formatseconds = seconds >= 10 ? seconds : "0"+seconds
-        let formatdays = days >= 10 ? days : "0"+days
-        
+    let currentDate = new Date()
+    let milliSec = date.getTime() - currentDate.getTime()
+
+    days(milliSec)
+    hours(milliSec)
+    min(milliSec)
+    sec(milliSec)
+
+
+    function days(milliSec) {
+
+        let currentDay = Math.floor((milliSec/(1000*60*60*24)))
+        let formatdays = currentDay >= 10 ? currentDay : "0"+ currentDay
         box1.textContent = formatdays
-        box1.style.color = "yellow"
         box2.textContent = formatdays
-        box3.textContent = formathours
-        box4.textContent = formathours
+
+    }
+
+
+    function hours(milliSec) {
+
+        let currentHours = Math.floor((milliSec/(1000*60*60)%24))
+        let formatHours = currentHours >= 10 ? currentHours : "0"+ currentHours
+        box3.textContent = formatHours
+        box4.textContent = formatHours
+
+    }
+
+
+    function min(milliSec) {
+
+        let currentMin = Math.floor((milliSec/(1000*60)%60))
+        let formatMin = currentMin >= 10 ? currentMin : "0"+ currentMin
         box5.textContent = formatMin
         box6.textContent = formatMin
-        box7.textContent = formatseconds
-        box8.textContent = formatseconds
-       
-       
+
     }
+
+
+    function sec(milliSec) {
+
+        let currentSec = Math.floor((milliSec/(1000)%60))
+        let formatSec = currentSec >= 10 ? currentSec : "0"+ currentSec
+        box7.textContent = formatSec
+        box8.textContent = formatSec
+
+    }
+       
 }
-
-
 
 
 
