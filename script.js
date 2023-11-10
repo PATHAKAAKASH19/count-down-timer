@@ -4,7 +4,7 @@ const box1 = document.getElementById("box1")
 const box2 = document.getElementById("box2")
 
 
-let date = new Date("10 november 2023")
+let date = new Date("30 november 2023")
 
 
 setInterval(showTime, 1000)
